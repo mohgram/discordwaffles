@@ -21,7 +21,8 @@ async def on_message(message):
         embed = discord.Embed(title="Help", description="Help has been delivered!", color=0x00ff00)
         embed.add_field(name="dwhelp", value="This menu is brought up", inline=False)
         embed.add_field(name="dworder [info]waffle", value="Orders a waffle!")
-    if message.content.startswith('sborder'):
+        await message.channel.send(embed=embed)
+    if message.content.startswith('dworder'):
         if "waffle" in message.content.lower():
           query = message.content
           stopwords = ['sborder']
