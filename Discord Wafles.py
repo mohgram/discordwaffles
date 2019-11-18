@@ -40,5 +40,7 @@ async def on_message(message):
           await message.channel.send(embed=embed2)
         else:
             await message.channel.send("There's no waffle to make!")
+   Client.run('NjQ1MjcwMDAxNzQxMjAxNDE5.XdLmTw.897wLKJAoLvC1k5QDm1LC1qentc')         
+            
 
 
