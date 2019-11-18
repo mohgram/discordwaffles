@@ -1,1 +1,1 @@
-worker: python Discord Wafles.py
+worker: python DiscordWaffles.py
