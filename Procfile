@@ -1,1 +1,1 @@
-worker: python sob.py
+worker: python Discord Wafles.py
