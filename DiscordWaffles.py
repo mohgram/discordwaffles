@@ -9,7 +9,8 @@ bot = commands.Bot(command_prefix='dw')
 @Client.event
 async def on_ready():
     print('bot is up')
-    await Client.change_presence(activity=discord.Game(name='dwhelp|Making waffles!'))
+    activity = discord.Activity(name='how to make waffles|dwhelp for help!', type=discord.ActivityType.watching)
+    await bot.change_presence(activity=activity)
 
 @Client.event
 async def on_message(message):
@@ -17,10 +18,6 @@ async def on_message(message):
         return
     if message.content.startswith("dwhello"):
         await message.channel.send("Hi :wave:")
-    if message.content.startswith("dwhelp"):
-        embed = discord.Embed(title="Help", description="Help has been delivered!", color=0x00ff00)
-        embed.add_field(name="dwhelp", value="This menu is brought up", inline=False)
-        embed.add_field(name="dworder [info]waffle", value="Orders a waffle!")
         await message.channel.send(embed=embed)
     if message.content.startswith('dworder'):
         if "waffle" in message.content.lower():
@@ -41,6 +38,13 @@ async def on_message(message):
           await message.channel.send(embed=embed)
         else:
             await message.channel.send("There's no waffle to make!")
+    await bot.process_commands(message)  
+@bot.command
+        embed = discord.Embed(title="Help", description="Help has been delivered!", color=0x00ff00)
+        embed.add_field(name="dwhelp", value="This menu is brought up", inline=False)
+        embed.add_field(name="dworder [info]waffle", value="Orders a waffle!")
+        await ctx.send(embed=embed)    
+            
 Client.run('NjQ1MjcwMDAxNzQxMjAxNDE5.XdLv2Q.dZDKcAUuSHfUg5G9G-ipMagqgFs')            
 
 
