@@ -45,6 +45,6 @@ async def on_message(message):
         embed.add_field(name="dworder [info]waffle", value="Orders a waffle!")
         await ctx.send(embed=embed)    
             
-Client.run('NjQ1MjcwMDAxNzQxMjAxNDE5.XdLv2Q.dZDKcAUuSHfUg5G9G-ipMagqgFs')            
+Client.run('NjQ1MjcwMDAxNzQxMjAxNDE5.XdQ-mQ.p5H9aHMNTJ0MCtWD3H-04N1Syh0')            
 
 
